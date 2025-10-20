@@ -61,7 +61,7 @@ h1, h2 {
 }
 
 span{
-    color: white;
+    color: #333;
 }
 
 /* Ensure answer buttons are stacked with space between them */
@@ -74,7 +74,7 @@ span{
 /* Make buttons fill the container and provide a margin fallback for older browsers */
 .answer-btn {
     background-color: rgba(239, 113, 10, 0.8);
-    color: #333;
+    color: #fff;
     padding: 1rem;
     border-radius: 10px;
     border: none;
@@ -162,7 +162,6 @@ button:hover {
 
 /* Progress Screen */
 #start-screen h1 {
-    background-color: rgba(239, 113, 10, 0.8);
     margin-bottom: 2rem;
 }
 
