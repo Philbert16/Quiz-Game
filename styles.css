@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* a {
@@ -7,130 +7,132 @@
     color: inherit;
 } */
 
-body{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: wheat;
-    font-family: 'Inter', sans-serif;
-    padding: 1em;
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: wheat;
+  font-family: "Inter", sans-serif;
+  padding: 1em;
 }
 
 :root {
-    --primary-color: #4CAF50;
-    --secondary-color: #f44336;
-    --background-color: #f4f4f4;
-    --text-color: #333;
+  --primary-color: #4caf50;
+  --secondary-color: #f44336;
+  --background-color: #f4f4f4;
+  --text-color: #333;
 }
 
 /* Start Screen */
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* background-color: white; */
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background-color: white; */
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  width: 100%;
+  max-width: 960px;
 }
 
 .screen {
-    display: none;
+  display: none;
 }
-.screen.active{
-    display: block;
+.screen.active {
+  display: block;
 }
 
 .screen.starter {
-    background-color: hsla(0, 0%, 100%, 0.47);
-    color: rgb(20, 16, 16);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-    width: 400px;
+  background-color: hsla(0, 0%, 100%, 0.47);
+  color: rgb(20, 16, 16);
+  padding: 1.25rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
 }
 
-h1, h2 {
-    color: rgb(239, 113, 10);
+h1,
+h2 {
+  color: rgb(239, 113, 10);
 }
 
-span{
-    color: #333;
+span {
+  color: #333;
 }
 
 /* Ensure answer buttons are stacked with space between them */
 #answer-container {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* works when container is flex or grid */
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* works when container is flex or grid */
 }
 
 /* Make buttons fill the container and provide a margin fallback for older browsers */
 .answer-btn {
-    background-color: rgba(239, 113, 10, 0.8);
-    color: #fff;
-    padding: 1rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    margin: 0; /* reset any default margin */
+  background-color: rgba(239, 113, 10, 0.8);
+  color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  margin: 0; /* reset any default margin */
 }
 .answer-btn + .answer-btn {
-    margin-top: 12px; /* fallback spacing if gap isn't supported */
+  margin-top: 12px; /* fallback spacing if gap isn't supported */
 }
 
-button{
-    padding: 11px;
-    background-color: rgba(239, 113, 10, 0.8);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
+button {
+  padding: 11px;
+  background-color: rgba(239, 113, 10, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
 
 button:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
 }
-
 
 /* Quiz Screen */
-.quiz-info{
-    color: #666;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.quiz-info {
+  color: #666;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.result-info{
-    background-color: rgba(239, 113, 10, 0.2);
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+.result-info {
+  background-color: rgba(239, 113, 10, 0.2);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 .result-info p {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
 }
 
 .result-bar {
-    color: rgb(239, 113, 10);
-    margin-bottom: 1rem;
-    padding: 10px;
-    border-radius: 5px;
+  color: rgb(239, 113, 10);
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 /* Start Screen */
@@ -138,37 +140,117 @@ button:hover {
 /* Answer styles (handled above with #answer-container and .answer-btn) */
 
 .progress-bar {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    overflow: hidden;
-    height: 10px;
-    margin: 10px 0;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 10px;
+  margin: 10px 0;
 }
 
 .progress-fill {
-    background-color: #4CAF50;
-    height: 100%;
-    transition: width 0.3s ease;
-} 
-
-.progress {
-    width: 0%;
-    height: 100%;
-    /* position: relative; */
-    transition: width 0.3s ease;
+  background-color: #4caf50;
+  height: 100%;
+  transition: width 0.3s ease;
 }
 
-
+.progress {
+  width: 0%;
+  height: 100%;
+  /* position: relative; */
+  transition: width 0.3s ease;
+}
 
 /* Progress Screen */
 #start-screen h1 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-#question-title{
-    color: #333;
-    font-weight: 300;
-    font-style: italic;
+#question-title {
+  color: #333;
+  font-weight: 300;
+  font-style: italic;
 }
 
+/* Responsive adjustments */
+:root {
+  font-size: 16px;
+}
 
+@media (max-width: 768px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .container {
+    gap: 14px;
+    padding: 0 0.5rem;
+  }
+
+  .screen.starter {
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    max-width: 480px;
+    margin: 0 8px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .quiz-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .result-info p {
+    font-size: 1rem;
+  }
+  .progress-bar {
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 15px;
+  }
+
+  .screen.starter {
+    padding: 0.875rem;
+    border-radius: 8px;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  .answer-btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+
+  button {
+    padding: 10px 12px;
+    font-size: 1rem;
+  }
+
+  .container {
+    min-height: auto;
+  }
+}
+
+/* Small touch-target improvement */
+.answer-btn,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
